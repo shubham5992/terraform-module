@@ -1,0 +1,63 @@
+
+#dev infra
+
+
+module "dev-demo-app"{
+         source = "./terra-module/demo-app"
+         env_name = "dev"
+         instance_type = "t2.micro"
+         ami_id = "ami-0c7217cdde317cfec"
+         instance_name = "my-demo-instance"
+         bucket_name = "my-s3-bucket"
+         dynamodb-merahan = "my-dyanomodb-tabel-01"
+
+
+
+
+
+}
+
+
+
+
+
+
+#QA infra
+module "qa-demo-app"{
+         source = "./terra-module/demo-app"
+         env_name = "QA"
+         instance_type = "t2.micro"
+         ami_id = "ami-0c7217cdde317cfec"
+         instance_name = "my-demo-instance"
+         bucket_name = "my-s3-bucket"
+         dynamodb-merahan = "my-dyanomodb-tabel-01"
+
+
+
+
+
+}
+
+
+
+
+
+
+
+#PROD infra
+
+
+module "prod-demo-app"{
+         source = "./terra-module/demo-app"
+         env_name = "PRODUCTION"
+         instance_type = "t2.micro"
+         ami_id = "ami-0c7217cdde317cfec"
+         instance_name = "my-demo-instance"
+         bucket_name = "my-s3-bucket"
+         dynamodb-merahan = "my-dyanomodb-tabel-01"
+
+
+
+
+
+}
